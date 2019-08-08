@@ -1,0 +1,25 @@
+<div class="loginContainer">
+  <div class="loginTitle">Login</div>
+  <div class="fields-Container">
+
+    <!-- <form (ngSubmit)="Submit(f)" #f="ngForm">
+        <input type="text" required id="user" placeholder="Usuario..." ngModel name="user" #user />
+        <input type="password" required id="pass" placeholder="Contraseña..." ngModel name="pass"  #pass />
+        <button type="submit" id="login" class="loginButton" (click)="OnLogin(user.value,pass.value)">Ingresar</button>
+    </form> -->
+
+    <form (ngSubmit)="OnLogin()" [formGroup]="FormularioLogin">
+      <input type="text" id="user" placeholder="Usuario..." name="user" formControlName="user" />
+      <label *ngIf="!FormularioLogin.controls['user'].valid">Debe ingresar un usuario</label>
+
+      <input type="password" required id="pass" placeholder="Contraseña..." name="pass" formControlName="pass" />
+      <button type="submit" id="login" class="loginButton">Ingresar</button>
+    </form>
+
+
+
+  </div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

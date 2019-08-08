@@ -1,0 +1,33 @@
+<div class="container">
+    <h3 class="h3">Catálogo de Productos</h3>
+    <hr>
+    <div class="row">
+        <div class="col-sm-3 col-sm-offset-3">
+
+            <div class="form-group">
+                <label for="">
+                    <h4>¿Qué estás buscando?</h4>
+                </label>
+                <input [(ngModel)]="buscar" type="text" class="form-control" value="" id="buscador"
+                    placeholder="Buscar producto">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <button (click)="Prueba()">Click</button>
+        <div class="col-md-3 col-sm-6" *ngFor="let producto of productos">
+            <!-- <div class="product-grid6">
+                <div class="product-image6">
+                    <a href="#">
+                        <img class="pic-1" [src]="'assets/'+producto.imagen">
+                    </a>
+                </div>
+                
+
+            </div> -->
+        </div>
+
+    </div>
+</div>
+
+<hr>
