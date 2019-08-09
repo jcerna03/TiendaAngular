@@ -20,7 +20,10 @@ export class CatalogoComponent implements OnInit {
   }
 
   Prueba(){
-    console.log(this.productos)
+
+      console.log("Prueba")
+
+    
   }
 
   OnSeleccionar(nombre, cantidad, imagen) {

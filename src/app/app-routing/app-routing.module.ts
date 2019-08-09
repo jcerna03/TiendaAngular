@@ -7,21 +7,23 @@ import { VistaPreviaComponent } from 'app/vista-previa/vista-previa.component';
 import { CarritoComponent } from 'app/carrito/carrito.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent},
-  { path: 'main', component: MainComponent, children: [
-    {
-      path: '',
-      component: CatalogoComponent
-    },
-    {
-      path: 'vista-previa/:nombre',
-      component: VistaPreviaComponent
-    },
-    {
-      path: 'carrito',
-      component: CarritoComponent
-    }
-  ]}
+  { path: '', component: LoginComponent },
+  {
+    path: 'main', component: MainComponent, children: [
+      {
+        path: '',
+        component: CatalogoComponent
+      },
+      {
+        path: 'vista-previa/:nombre',
+        component: VistaPreviaComponent
+      },
+      {
+        path: 'carrito',
+        component: CarritoComponent
+      }
+    ]
+  }
 ];
 
 @NgModule({

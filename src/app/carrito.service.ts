@@ -10,7 +10,7 @@ export class CarritoService {
 
   constructor(private http: Http) {
   }
-  
+
   getProductos() {
     return this.http
       .get('https://tienda-13a10.firebaseio.com/productos.json')
@@ -21,6 +21,8 @@ export class CarritoService {
     this.productosSeleccionados.push(pedido);
   }
 
-
+  productosCarrito() {
+    return this.productosSeleccionados;
+  }
 
 }
