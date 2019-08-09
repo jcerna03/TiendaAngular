@@ -9,7 +9,7 @@
           <ul class="nav navbar-nav" [ngStyle]="{float: 'right'}">
             <li><a [routerLink]="['/main']">Home</a></li>
             <li><a [routerLink]="['carrito']"><span class="fa fa-gift bigicon"></span>
-                <span *ngIf="seleccionados.length > 0">{{seleccionados.length}} -</span>
+                <span *ngIf="seleccionados.length >= 0">{{seleccionados.length}} -</span>
                 Items in Carrito</a></li>
             <li><a [routerLink]="['']">Cerrar Sesion</a></li>
           </ul>

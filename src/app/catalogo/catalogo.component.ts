@@ -20,17 +20,17 @@ export class CatalogoComponent implements OnInit {
   }
 
   Prueba(){
-
-      console.log("Prueba")
-
-    
+    this.CarritoService.productosSeleccionados = [];
+      console.log(this.CarritoService.productosSeleccionados.length)
   }
 
   OnSeleccionar(nombre, cantidad, imagen) {
     let precio = this.getPrecioProducto(nombre) * cantidad;
     let producto = { nombre: nombre, cantidad: cantidad, imagen: imagen, precio: precio };
     this.CarritoService.seleccionarProducto(producto)
+    console.log(this.CarritoService.productosSeleccionados.length)
   }
+
   getPrecioProducto(nombre) {
     for (let item of this.productos) {
       if (item.nombre == nombre) {

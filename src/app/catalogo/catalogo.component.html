@@ -14,11 +14,11 @@
         </div>
     </div>
     <div class="row">
-        <label>{{Prueba()}}</label>
+      <button (click)="Prueba()">prueba</button>
         <div class="col-md-3 col-sm-6" *ngFor="let producto of productos">
             <div class="product-grid6">
-                <div class="product-image6">
-                    <a href="#">
+                <div class= "product-image6">
+                    <a class="thumbnail">
                         <img class="pic-1" [src]="'assets/'+producto.imagen">
                     </a>
                 </div>

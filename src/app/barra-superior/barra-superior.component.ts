@@ -8,8 +8,9 @@ import { CarritoService } from 'app/carrito.service'
 })
 export class BarraSuperiorComponent implements OnInit {
   seleccionados: any[];
+  
   constructor(private CarritoService: CarritoService) { }
-
+  
   ngOnInit() {
     this.seleccionados = this.CarritoService.productosSeleccionados;
   }

@@ -9,6 +9,7 @@ export class CarritoService {
   productos: Productos[];
 
   constructor(private http: Http) {
+    this.getProductos().subscribe((data) => this.productos = data);
   }
 
   getProductos() {
@@ -23,6 +24,19 @@ export class CarritoService {
 
   productosCarrito() {
     return this.productosSeleccionados;
+  }
+
+  Pagar() {
+    for (let key in this.productos) {
+      for (let item of this.productosSeleccionados) {
+        if (this.productos[key].nombre == item.nombre) {
+          this.productos[key].unidades -= item.cantidad;
+        }
+      }
+    }
+    this.productosSeleccionados = [];
+    let newData = JSON.stringify(this.productos);
+    return this.http.put('https://tienda-13a10.firebaseio.com/productos.json', newData)
   }
 
 }
