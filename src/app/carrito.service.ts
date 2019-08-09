@@ -5,9 +5,10 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class CarritoService {
+
   productosSeleccionados: any[] = [];
   productos: Productos[];
-
+  
   constructor(private http: Http) {
     this.getProductos().subscribe((data) => this.productos = data);
   }
@@ -18,9 +19,9 @@ export class CarritoService {
       .map((response: Response) => response.json())
   }
 
-  seleccionarProducto(pedido) {
-    this.productosSeleccionados.push(pedido);
-  }
+  // seleccionarProducto(pedido) {
+  //   this.productosSeleccionados.push(pedido);
+  // }
 
   productosCarrito() {
     return this.productosSeleccionados;
@@ -34,7 +35,7 @@ export class CarritoService {
         }
       }
     }
-    this.productosSeleccionados = [];
+    this.productosSeleccionados.splice(0, this.productosSeleccionados.length);
     let newData = JSON.stringify(this.productos);
     return this.http.put('https://tienda-13a10.firebaseio.com/productos.json', newData)
   }

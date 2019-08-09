@@ -20,9 +20,9 @@ export class VistaPreviaComponent implements OnInit {
     this.CarritoService.getProductos()
       .subscribe(
         (data) => {
-          for(let item of data){
-            if(item.nombre == this.nombre){
-              this.productoSeleccionado = item;
+          for(let producto of data){
+            if(producto.nombre == this.nombre){
+              this.productoSeleccionado = producto;
             }
           }
         }
