@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { LoginComponent } from 'app/login/login.component';
 import { MainComponent } from 'app/main/main.component';
 import { CatalogoComponent } from 'app/catalogo/catalogo.component';
@@ -15,7 +14,7 @@ const routes: Routes = [
       component: CatalogoComponent
     },
     {
-      path: 'vista-previa',
+      path: 'vista-previa/:nombre',
       component: VistaPreviaComponent
     },
     {

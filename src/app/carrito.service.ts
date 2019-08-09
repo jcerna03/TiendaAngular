@@ -5,13 +5,12 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class CarritoService {
-
   productosSeleccionados: any[] = [];
   productos: Productos[];
 
   constructor(private http: Http) {
   }
-
+  
   getProductos() {
     return this.http
       .get('https://tienda-13a10.firebaseio.com/productos.json')

@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { BarraSuperiorComponent } from 'app/barra-superior/barra-superior.component'
-import { VistaPreviaComponent } from 'app/vista-previa/vista-previa.component';
 import { CarritoService } from '../carrito.service';
 import { Productos } from '../productos';
 
