@@ -7,8 +7,7 @@ import { Productos } from '../productos';
 @Component({
   selector: 'app-catalogo',
   templateUrl: './catalogo.component.html',
-  styleUrls: ['./catalogo.component.css'],
-  providers: [CarritoService]
+  styleUrls: ['./catalogo.component.css']
 })
 export class CatalogoComponent implements OnInit {
 

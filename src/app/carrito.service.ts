@@ -10,10 +10,8 @@ export class CarritoService {
   productos: Productos[];
 
   constructor(private http: Http) {
-    this.getProductos()
-      .subscribe((data) => this.productos = data)
   }
-  
+
   getProductos() {
     return this.http
       .get('https://tienda-13a10.firebaseio.com/productos.json')

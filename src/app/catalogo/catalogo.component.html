@@ -14,17 +14,31 @@
         </div>
     </div>
     <div class="row">
-        <button (click)="Prueba()">Click</button>
+        <!-- <button (click)="Prueba()">Click</button> -->
         <div class="col-md-3 col-sm-6" *ngFor="let producto of productos">
-            <!-- <div class="product-grid6">
+            <div class="product-grid6">
                 <div class="product-image6">
                     <a href="#">
                         <img class="pic-1" [src]="'assets/'+producto.imagen">
                     </a>
                 </div>
-                
+                <div class="caption">
+                    <h3>{{producto.nombre}}</h3>
+                    <p><b>Precio: </b>${{producto.precio}}</p>
+                    <p><b>Unidades disponibles: </b>{{producto.unidades}}</p>
+                    <div class="botones-cont">
+                        <a [routerLink]="['vista-previa', producto.nombre]" class="btn btn-primary vermas"
+                            role="button">Ver
+                            más</a>
+                        <div class="anadir-cont">
+                            <a (click)="OnSeleccionar(producto.nombre, cantidad.value, producto.imagen)"
+                                class="btn btn-warning" role="button">Añadir</a>
+                            <input #cantidad type="number" class="form-control" value="1" id="" placeholder="">
+                        </div>
+                    </div>
+                </div>
 
-            </div> -->
+            </div>
         </div>
 
     </div>
